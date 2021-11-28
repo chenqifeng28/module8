@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2021-11-28T13:54:47Z"
+  labels:
+    app: httpserver
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2021-11-28T13:54:47Z"
+  name: http-nodeport
+  namespace: default
+  resourceVersion: "505164"
+  selfLink: /api/v1/namespaces/default/services/http-nodeport
+  uid: 14385906-3378-4aef-a888-91d650caa4e1
+spec:
+  clusterIP: 10.247.70.37
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: cce-service-0
+    nodePort: 31822
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: httpserver
+  sessionAffinity: None
+  type: NodePort
