@@ -1,0 +1,45 @@
+##我目前的环境k8s版本为1.19.5
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  creationTimestamp: "2021-11-28T13:55:22Z"
+  generation: 1
+  managedFields:
+  - apiVersion: extensions/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/ingress.class: {}
+      f:spec:
+        f:rules: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2021-11-28T13:55:22Z"
+  - apiVersion: networking.k8s.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:loadBalancer:
+          f:ingress: {}
+    manager: nginx-ingress-controller
+    operation: Update
+    time: "2021-11-28T13:55:43Z"
+  name: http-ingres
+  namespace: default
+  resourceVersion: "505364"
+  selfLink: /apis/extensions/v1beta1/namespaces/default/ingresses/http-ingres
+  uid: cf7a6479-ad53-4f90-931a-2820d59a17ea
+spec:
+  rules:
+  - host: httpserver.demo.com
+    http:
+      paths:
+      - backend:
+          serviceName: httpserver
+          servicePort: 80
+        path: /
+        pathType: ImplementationSpecific
