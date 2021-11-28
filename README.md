@@ -10,4 +10,5 @@
 作业提交链接： https://jinshuju.net/f/OfIY3L
 提交截止时间：11 月 28 日 23:59
 
-
+通过ingress访问结果：
+![image](https://user-images.githubusercontent.com/32876594/143771094-107aa9de-fc74-4b7b-a453-c0a56bc0679d.png)
