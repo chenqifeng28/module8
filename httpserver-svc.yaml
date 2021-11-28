@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2021-11-28T13:39:50Z"
+  labels:
+    app: httpserver
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:ports:
+          .: {}
+          k:{"port":80,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: Go-http-client
+    operation: Update
+    time: "2021-11-28T13:39:50Z"
+  name: httpserver
+  namespace: default
+  resourceVersion: "502131"
+  selfLink: /api/v1/namespaces/default/services/httpserver
+  uid: 0c28361f-f373-40fa-b838-55797031e15a
+spec:
+  clusterIP: 10.247.155.18
+  ports:
+  - name: cce-service-0
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: httpserver
+  sessionAffinity: None
+  type: ClusterIP
